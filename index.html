@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="./index.css" rel="stylesheet" type="text/css">
+        <title>🤪 ScrapYard Hub</title>
+        <script src="./index.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <marquee behavior="alternate" direction="right" scrollamount="12" class="title">
+                Welcome to ScrapYard 
+                <span style="font-family: Wingdings;">☠☢☣</span>
+            </marquee>
+            
+            <button id="color-mode" onclick="toggleColorMode()" class="escape-button">
+                Toggle Chaos Mode 
+            </button>
+            
+            <div class="progress-section">
+                <h2>Progress to Nowhere</h2>
+                <div class="progress-bar">
+                    <div id="progress"></div>
+                </div>
+                <div id="progress-text">Loading your patience...</div>
+                <small style="color: #a85432;">Warning: Progress may go backwards</small>
+            </div>
+
+            <div class="calculator">
+                <h2>Un-Calculator 🔢</h2>
+                <input type="number" id="num1" placeholder="Enter a number (or don't)">
+                <input type="number" id="num2" placeholder="Another number (maybe)">
+                <div class="operations">
+                    <button onclick="calculate('+')" title="Might add">➕</button>
+                    <button onclick="calculate('-')" title="Could subtract">➖</button>
+                    <button onclick="calculate('*')" title="Possibly multiply">✖️</button>
+                    <button onclick="calculate('/')" title="Divide if feeling lucky">➗</button>
+                </div>
+                <div id="result">Results may or may not appear here</div>
+                <small>* Results guaranteed to be incorrect</small>
+                <small>** Accuracy not included</small>
+                <small>*** Side effects may include confusion</small>
+            </div>
+            
+            <div class="calculator">
+                <h2>Useless Search Engine 🔍</h2>
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search for the unsearchable...">
+                    <button onclick="search()" class="escape-button">
+                        Search in Void
+                    </button>
+                </div>
+                <div id="search-result">Ready to disappoint</div>
+                <div id="suggestions" class="search-suggestions"></div>
+                <small>Powered by quantum uncertainty</small>
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <small style="color: #a85432;">
+                    ⚠️ Warning: This website may cause temporary loss of sanity
+                </small>
+                <br>
+                <small style="color: #a85432;">
+                    Results may vary in parallel universes
+                </small>
+            </div>
+        </div>
+
+        <script>
+            document.querySelectorAll('.container > div').forEach(div => {
+                div.style.setProperty('--random-rotate', `${Math.random() * 4 - 2}deg`);
+                div.style.setProperty('--random-skew', `${Math.random() * 10 - 5}deg`);
+            });
+        </script>
+    </body>
+</html>
